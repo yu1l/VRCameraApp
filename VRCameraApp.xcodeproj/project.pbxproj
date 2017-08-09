@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CAC4B3041F3A59F200B8F818 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4B3031F3A59F200B8F818 /* AppDelegate.swift */; };
+		CAC4B3061F3A59F200B8F818 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4B3051F3A59F200B8F818 /* ViewController.swift */; };
+		CAC4B3091F3A59F200B8F818 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC4B3071F3A59F200B8F818 /* Main.storyboard */; };
+		CAC4B30C1F3A59F200B8F818 /* VRCameraApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CAC4B30A1F3A59F200B8F818 /* VRCameraApp.xcdatamodeld */; };
+		CAC4B30E1F3A59F200B8F818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAC4B30D1F3A59F200B8F818 /* Assets.xcassets */; };
+		CAC4B3111F3A59F200B8F818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC4B30F1F3A59F200B8F818 /* LaunchScreen.storyboard */; };
+		CAC4B31C1F3A59F200B8F818 /* VRCameraAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4B31B1F3A59F200B8F818 /* VRCameraAppTests.swift */; };
+		CAC4B3271F3A59F200B8F818 /* VRCameraAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4B3261F3A59F200B8F818 /* VRCameraAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAC4B3181F3A59F200B8F818 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAC4B2F81F3A59F200B8F818 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAC4B2FF1F3A59F200B8F818;
+			remoteInfo = VRCameraApp;
+		};
+		CAC4B3231F3A59F200B8F818 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAC4B2F81F3A59F200B8F818 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAC4B2FF1F3A59F200B8F818;
+			remoteInfo = VRCameraApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CAC4B3001F3A59F200B8F818 /* VRCameraApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRCameraApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAC4B3031F3A59F200B8F818 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CAC4B3051F3A59F200B8F818 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CAC4B3081F3A59F200B8F818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAC4B30B1F3A59F200B8F818 /* VRCameraApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VRCameraApp.xcdatamodel; sourceTree = "<group>"; };
+		CAC4B30D1F3A59F200B8F818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CAC4B3101F3A59F200B8F818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CAC4B3121F3A59F200B8F818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAC4B3171F3A59F200B8F818 /* VRCameraAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VRCameraAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAC4B31B1F3A59F200B8F818 /* VRCameraAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRCameraAppTests.swift; sourceTree = "<group>"; };
+		CAC4B31D1F3A59F200B8F818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAC4B3221F3A59F200B8F818 /* VRCameraAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VRCameraAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAC4B3261F3A59F200B8F818 /* VRCameraAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRCameraAppUITests.swift; sourceTree = "<group>"; };
+		CAC4B3281F3A59F200B8F818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAC4B2FD1F3A59F200B8F818 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAC4B3141F3A59F200B8F818 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAC4B31F1F3A59F200B8F818 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CAC4B2F71F3A59F200B8F818 = {
+			isa = PBXGroup;
+			children = (
+				CAC4B3021F3A59F200B8F818 /* VRCameraApp */,
+				CAC4B31A1F3A59F200B8F818 /* VRCameraAppTests */,
+				CAC4B3251F3A59F200B8F818 /* VRCameraAppUITests */,
+				CAC4B3011F3A59F200B8F818 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CAC4B3011F3A59F200B8F818 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAC4B3001F3A59F200B8F818 /* VRCameraApp.app */,
+				CAC4B3171F3A59F200B8F818 /* VRCameraAppTests.xctest */,
+				CAC4B3221F3A59F200B8F818 /* VRCameraAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAC4B3021F3A59F200B8F818 /* VRCameraApp */ = {
+			isa = PBXGroup;
+			children = (
+				CAC4B3031F3A59F200B8F818 /* AppDelegate.swift */,
+				CAC4B3051F3A59F200B8F818 /* ViewController.swift */,
+				CAC4B3071F3A59F200B8F818 /* Main.storyboard */,
+				CAC4B30D1F3A59F200B8F818 /* Assets.xcassets */,
+				CAC4B30F1F3A59F200B8F818 /* LaunchScreen.storyboard */,
+				CAC4B3121F3A59F200B8F818 /* Info.plist */,
+				CAC4B30A1F3A59F200B8F818 /* VRCameraApp.xcdatamodeld */,
+			);
+			path = VRCameraApp;
+			sourceTree = "<group>";
+		};
+		CAC4B31A1F3A59F200B8F818 /* VRCameraAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAC4B31B1F3A59F200B8F818 /* VRCameraAppTests.swift */,
+				CAC4B31D1F3A59F200B8F818 /* Info.plist */,
+			);
+			path = VRCameraAppTests;
+			sourceTree = "<group>";
+		};
+		CAC4B3251F3A59F200B8F818 /* VRCameraAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CAC4B3261F3A59F200B8F818 /* VRCameraAppUITests.swift */,
+				CAC4B3281F3A59F200B8F818 /* Info.plist */,
+			);
+			path = VRCameraAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAC4B2FF1F3A59F200B8F818 /* VRCameraApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAC4B32B1F3A59F200B8F818 /* Build configuration list for PBXNativeTarget "VRCameraApp" */;
+			buildPhases = (
+				CAC4B2FC1F3A59F200B8F818 /* Sources */,
+				CAC4B2FD1F3A59F200B8F818 /* Frameworks */,
+				CAC4B2FE1F3A59F200B8F818 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VRCameraApp;
+			productName = VRCameraApp;
+			productReference = CAC4B3001F3A59F200B8F818 /* VRCameraApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAC4B3161F3A59F200B8F818 /* VRCameraAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAC4B32E1F3A59F200B8F818 /* Build configuration list for PBXNativeTarget "VRCameraAppTests" */;
+			buildPhases = (
+				CAC4B3131F3A59F200B8F818 /* Sources */,
+				CAC4B3141F3A59F200B8F818 /* Frameworks */,
+				CAC4B3151F3A59F200B8F818 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAC4B3191F3A59F200B8F818 /* PBXTargetDependency */,
+			);
+			name = VRCameraAppTests;
+			productName = VRCameraAppTests;
+			productReference = CAC4B3171F3A59F200B8F818 /* VRCameraAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CAC4B3211F3A59F200B8F818 /* VRCameraAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAC4B3311F3A59F200B8F818 /* Build configuration list for PBXNativeTarget "VRCameraAppUITests" */;
+			buildPhases = (
+				CAC4B31E1F3A59F200B8F818 /* Sources */,
+				CAC4B31F1F3A59F200B8F818 /* Frameworks */,
+				CAC4B3201F3A59F200B8F818 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAC4B3241F3A59F200B8F818 /* PBXTargetDependency */,
+			);
+			name = VRCameraAppUITests;
+			productName = VRCameraAppUITests;
+			productReference = CAC4B3221F3A59F200B8F818 /* VRCameraAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAC4B2F81F3A59F200B8F818 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = yuhoshino;
+				TargetAttributes = {
+					CAC4B2FF1F3A59F200B8F818 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = AUJHBFXVZ3;
+						ProvisioningStyle = Manual;
+					};
+					CAC4B3161F3A59F200B8F818 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = AUJHBFXVZ3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CAC4B2FF1F3A59F200B8F818;
+					};
+					CAC4B3211F3A59F200B8F818 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = AUJHBFXVZ3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CAC4B2FF1F3A59F200B8F818;
+					};
+				};
+			};
+			buildConfigurationList = CAC4B2FB1F3A59F200B8F818 /* Build configuration list for PBXProject "VRCameraApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CAC4B2F71F3A59F200B8F818;
+			productRefGroup = CAC4B3011F3A59F200B8F818 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAC4B2FF1F3A59F200B8F818 /* VRCameraApp */,
+				CAC4B3161F3A59F200B8F818 /* VRCameraAppTests */,
+				CAC4B3211F3A59F200B8F818 /* VRCameraAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAC4B2FE1F3A59F200B8F818 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAC4B3111F3A59F200B8F818 /* LaunchScreen.storyboard in Resources */,
+				CAC4B30E1F3A59F200B8F818 /* Assets.xcassets in Resources */,
+				CAC4B3091F3A59F200B8F818 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAC4B3151F3A59F200B8F818 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAC4B3201F3A59F200B8F818 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAC4B2FC1F3A59F200B8F818 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAC4B30C1F3A59F200B8F818 /* VRCameraApp.xcdatamodeld in Sources */,
+				CAC4B3061F3A59F200B8F818 /* ViewController.swift in Sources */,
+				CAC4B3041F3A59F200B8F818 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAC4B3131F3A59F200B8F818 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAC4B31C1F3A59F200B8F818 /* VRCameraAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAC4B31E1F3A59F200B8F818 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAC4B3271F3A59F200B8F818 /* VRCameraAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAC4B3191F3A59F200B8F818 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAC4B2FF1F3A59F200B8F818 /* VRCameraApp */;
+			targetProxy = CAC4B3181F3A59F200B8F818 /* PBXContainerItemProxy */;
+		};
+		CAC4B3241F3A59F200B8F818 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAC4B2FF1F3A59F200B8F818 /* VRCameraApp */;
+			targetProxy = CAC4B3231F3A59F200B8F818 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CAC4B3071F3A59F200B8F818 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAC4B3081F3A59F200B8F818 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CAC4B30F1F3A59F200B8F818 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAC4B3101F3A59F200B8F818 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAC4B3291F3A59F200B8F818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CAC4B32A1F3A59F200B8F818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CAC4B32C1F3A59F200B8F818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = AUJHBFXVZ3;
+				INFOPLIST_FILE = VRCameraApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = inc.dokugaku.vrcameraapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "828b6757-52f1-4193-b687-d5811dfac273";
+				PROVISIONING_PROFILE_SPECIFIER = VRCameraApp;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CAC4B32D1F3A59F200B8F818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = AUJHBFXVZ3;
+				INFOPLIST_FILE = VRCameraApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = inc.dokugaku.vrcameraapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "828b6757-52f1-4193-b687-d5811dfac273";
+				PROVISIONING_PROFILE_SPECIFIER = VRCameraApp;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CAC4B32F1F3A59F200B8F818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = AUJHBFXVZ3;
+				INFOPLIST_FILE = VRCameraAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = inc.dokugaku.VRCameraAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VRCameraApp.app/VRCameraApp";
+			};
+			name = Debug;
+		};
+		CAC4B3301F3A59F200B8F818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = AUJHBFXVZ3;
+				INFOPLIST_FILE = VRCameraAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = inc.dokugaku.VRCameraAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VRCameraApp.app/VRCameraApp";
+			};
+			name = Release;
+		};
+		CAC4B3321F3A59F200B8F818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = AUJHBFXVZ3;
+				INFOPLIST_FILE = VRCameraAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = inc.dokugaku.VRCameraAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = VRCameraApp;
+			};
+			name = Debug;
+		};
+		CAC4B3331F3A59F200B8F818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = AUJHBFXVZ3;
+				INFOPLIST_FILE = VRCameraAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = inc.dokugaku.VRCameraAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = VRCameraApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAC4B2FB1F3A59F200B8F818 /* Build configuration list for PBXProject "VRCameraApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAC4B3291F3A59F200B8F818 /* Debug */,
+				CAC4B32A1F3A59F200B8F818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAC4B32B1F3A59F200B8F818 /* Build configuration list for PBXNativeTarget "VRCameraApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAC4B32C1F3A59F200B8F818 /* Debug */,
+				CAC4B32D1F3A59F200B8F818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CAC4B32E1F3A59F200B8F818 /* Build configuration list for PBXNativeTarget "VRCameraAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAC4B32F1F3A59F200B8F818 /* Debug */,
+				CAC4B3301F3A59F200B8F818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CAC4B3311F3A59F200B8F818 /* Build configuration list for PBXNativeTarget "VRCameraAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAC4B3321F3A59F200B8F818 /* Debug */,
+				CAC4B3331F3A59F200B8F818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CAC4B30A1F3A59F200B8F818 /* VRCameraApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CAC4B30B1F3A59F200B8F818 /* VRCameraApp.xcdatamodel */,
+			);
+			currentVersion = CAC4B30B1F3A59F200B8F818 /* VRCameraApp.xcdatamodel */;
+			path = VRCameraApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CAC4B2F81F3A59F200B8F818 /* Project object */;
+}
