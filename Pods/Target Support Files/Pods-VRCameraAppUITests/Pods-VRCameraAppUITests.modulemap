@@ -1,0 +1,6 @@
+framework module Pods_VRCameraAppUITests {
+  umbrella header "Pods-VRCameraAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
