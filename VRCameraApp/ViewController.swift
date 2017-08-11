@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 import AVFoundation
 
 class ViewController: UIViewController {
@@ -221,7 +222,30 @@ extension ViewController {
         }
     }
     
+    func showErrorWithPhotoLibraryPermission() {
+        let alert = UIAlertController(title: "エラー:写真を保存できません。",
+                                      message: "「設定」→「プライバシー」→「写真」→「VRカメラ」をオンにしてください",
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "閉じる", style: UIAlertActionStyle.cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func screenShotMethod() {
+        let photos = PHPhotoLibrary.authorizationStatus()
+        switch photos {
+        case .denied:
+            self.showErrorWithPhotoLibraryPermission()
+            return
+        case .notDetermined:
+            self.showErrorWithPhotoLibraryPermission()
+            return
+        case .restricted:
+            self.showErrorWithPhotoLibraryPermission()
+            return
+        default:
+            break
+        }
+
         self.helpMenuButton.isHidden = true
         
         if (vrMode) {

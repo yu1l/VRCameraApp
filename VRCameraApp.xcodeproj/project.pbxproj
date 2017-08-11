@@ -263,7 +263,7 @@
 					CAC4B2FF1F3A59F200B8F818 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = AUJHBFXVZ3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					CAC4B3161F3A59F200B8F818 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -627,15 +627,15 @@
 			baseConfigurationReference = 24FD15B1F8872F2977CB89FE /* Pods-VRCameraApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = AUJHBFXVZ3;
 				INFOPLIST_FILE = VRCameraApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = inc.dokugaku.vrcameraapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "828b6757-52f1-4193-b687-d5811dfac273";
+				PROVISIONING_PROFILE_SPECIFIER = VRCameraApp;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -646,15 +646,15 @@
 			baseConfigurationReference = 53DF15D7354B210138D09D32 /* Pods-VRCameraApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = AUJHBFXVZ3;
 				INFOPLIST_FILE = VRCameraApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = inc.dokugaku.vrcameraapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "828b6757-52f1-4193-b687-d5811dfac273";
+				PROVISIONING_PROFILE_SPECIFIER = VRCameraApp;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
