@@ -35,12 +35,22 @@ class ViewController: UIViewController {
     var player: AVAudioPlayer?
     var vrMode = true
 
+    @IBOutlet weak var helpMenuButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.currentFilterName = filterNames[currentFilterIndex]
 
         self.setupEyeFrame()
         self.checkCameraAvailability()
+    }
+    
+    @IBAction func showHelpMenu(_ sender: UIButton) {
+        let alert = UIAlertController(title: "使い方",
+                                      message: "１回タップでフィルターを切り替え\n2回タップでVR/通常モードを切り替え\n画面長押しで撮影",
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "閉じる", style: UIAlertActionStyle.cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func checkCameraAvailability() {
@@ -212,6 +222,8 @@ extension ViewController {
     }
     
     func screenShotMethod() {
+        self.helpMenuButton.isHidden = true
+        
         if (vrMode) {
             self.rightEyeImageView.alpha = 0
             self.leftEyeImageView.frame = UIScreen.main.bounds
@@ -223,6 +235,8 @@ extension ViewController {
         view.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        
+        self.helpMenuButton.isHidden = false
         
         if (vrMode) {
             self.leftEyeImageView.frame = CGRect(x: screenWidth/2, y: 0, width: screenWidth/2, height: screenHeight)
