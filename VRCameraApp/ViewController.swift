@@ -40,8 +40,25 @@ class ViewController: UIViewController {
         self.currentFilterName = filterNames[currentFilterIndex]
 
         self.setupEyeFrame()
-        self.setupCaptureDevice()
-        self.setupGestureRecognizers()
+        self.checkCameraAvailability()
+    }
+    
+    func checkCameraAvailability() {
+        if AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) ==  AVAuthorizationStatus.authorized {
+            self.setupCaptureDevice()
+        } else {
+            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo, completionHandler: { (granted: Bool) -> Void in
+                if granted == true {
+                    self.setupCaptureDevice()
+                } else {
+                    let alert = UIAlertController(title: "カメラが有効になっていません", message: "「設定」→「プライバシー」→「カメラ」→「VRカメラ」を有効にしてください", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "閉じる", style: UIAlertActionStyle.cancel, handler: { _ in
+                        self.checkCameraAvailability()
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            })
+        }
     }
     
     func setupCaptureDevice() {
@@ -68,6 +85,7 @@ class ViewController: UIViewController {
         videoOutput.setSampleBufferDelegate(self, queue: videoQueue)
         captureSession.addOutput(videoOutput)
         captureSession.startRunning()
+        self.setupGestureRecognizers()
     }
     
     override func didReceiveMemoryWarning() {
