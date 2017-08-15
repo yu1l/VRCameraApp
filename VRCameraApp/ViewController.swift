@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     
     @IBAction func showHelpMenu(_ sender: UIButton) {
         let alert = UIAlertController(title: "使い方",
-                                      message: "１回タップでフィルターを切り替え\n2回タップでVR/通常モードを切り替え\n画面長押しで撮影",
+                                      message: "１回タップでフィルターを切り替え\n2回タップでVR/通常モードを切り替え\n映像画面を長押しで写真を撮る",
                                       preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "閉じる", style: UIAlertActionStyle.cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
@@ -153,12 +153,14 @@ extension ViewController {
     func setupGestureRecognizers() {
         let singleTapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didSingleTap(_:)))
         singleTapGesture.numberOfTapsRequired = 1
+        singleTapGesture.numberOfTouchesRequired = 1
         
         let doubleTapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didDoubleTap(_:)))
         doubleTapGesture.numberOfTapsRequired = 2
+        doubleTapGesture.numberOfTouchesRequired = 1
         
         let longPressGesture: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(didLongPress(sender:)))
-        longPressGesture.minimumPressDuration = 0.1
+        longPressGesture.numberOfTouchesRequired = 1
 
         singleTapGesture.require(toFail: doubleTapGesture)
         longPressGesture.require(toFail: singleTapGesture)
@@ -232,18 +234,9 @@ extension ViewController {
     
     func screenShotMethod() {
         let photos = PHPhotoLibrary.authorizationStatus()
-        switch photos {
-        case .denied:
+        if(photos == .denied || photos == .restricted) {
             self.showErrorWithPhotoLibraryPermission()
             return
-        case .notDetermined:
-            self.showErrorWithPhotoLibraryPermission()
-            return
-        case .restricted:
-            self.showErrorWithPhotoLibraryPermission()
-            return
-        default:
-            break
         }
 
         self.helpMenuButton.isHidden = true
