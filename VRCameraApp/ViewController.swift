@@ -60,7 +60,20 @@ class ViewController: UIViewController {
 
         self.setupEyeFrame()
         self.checkCameraAvailability()
-        self.setupVoiceCommand()
+        self.checkMicAvailability()
+    }
+    
+    private func checkMicAvailability() {
+        switch AVAudioSession.sharedInstance().recordPermission() {
+        case AVAudioSessionRecordPermission.granted:
+            self.setupVoiceCommand()
+        case AVAudioSessionRecordPermission.denied:
+            break
+        case AVAudioSessionRecordPermission.undetermined:
+            self.setupVoiceCommand()
+        default:
+            break
+        }
     }
     
     private func setupVoiceCommand() {
@@ -125,8 +138,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showHelpMenu(_ sender: UIButton) {
+        var alertMessage = "１回タップでフィルターを切り替え\n2回タップでVR/通常モードを切り替え\n映像画面を長押しで写真を撮る"
+        if AVAudioSession.sharedInstance().recordPermission() == AVAudioSessionRecordPermission.granted {
+            alertMessage = "１回タップするか指パッチンでフィルターを切り替え\n2回タップでVR/通常モードを切り替え\n映像画面を長押しで写真を撮る"
+        }
+
         let alert = UIAlertController(title: "使い方",
-                                      message: "１回タップでフィルターを切り替え\n2回タップでVR/通常モードを切り替え\n映像画面を長押しで写真を撮る",
+                                      message: alertMessage,
                                       preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "閉じる", style: UIAlertActionStyle.cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
@@ -293,9 +311,6 @@ extension ViewController {
         guard let url = Bundle.main.url(forResource: name, withExtension: "mp3") else { return }
         
         do {
-//            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-//            try AVAudioSession.sharedInstance().setActive(true)
-            
             player = try AVAudioPlayer(contentsOf: url)
             guard let player = player else { return }
             if(!player.isPlaying) {
