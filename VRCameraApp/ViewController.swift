@@ -63,7 +63,7 @@ class ViewController: UIViewController {
         self.checkMicAvailability()
     }
     
-    private func checkMicAvailability() {
+    func checkMicAvailability() {
         switch AVAudioSession.sharedInstance().recordPermission() {
         case AVAudioSessionRecordPermission.granted:
             self.setupVoiceCommand()
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private func setupVoiceCommand() {
+    func setupVoiceCommand() {
         var dataFormat = AudioStreamBasicDescription(mSampleRate: 44100.0,
                                                      mFormatID: kAudioFormatLinearPCM,
                                                      mFormatFlags: AudioFormatFlags(kLinearPCMFormatFlagIsBigEndian | kLinearPCMFormatFlagIsSignedInteger | kLinearPCMFormatFlagIsPacked),
@@ -135,6 +135,15 @@ class ViewController: UIViewController {
                 })
             }
         }
+    }
+    
+    func stopUpdatingVolume() {
+        // Finish observation
+        self.voiceCommandTimer.invalidate()
+        self.voiceCommandTimer = nil
+        AudioQueueFlush(self.voiceCommandQueue)
+        AudioQueueStop(self.voiceCommandQueue, false)
+        AudioQueueDispose(self.voiceCommandQueue, true)
     }
     
     @IBAction func showHelpMenu(_ sender: UIButton) {
@@ -308,6 +317,7 @@ extension ViewController {
     }
     
     func playSound(name: String) {
+        stopUpdatingVolume()
         guard let url = Bundle.main.url(forResource: name, withExtension: "mp3") else { return }
         
         do {
@@ -315,8 +325,10 @@ extension ViewController {
             guard let player = player else { return }
             if(!player.isPlaying) {
                 player.play()
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: { 
+                let when = DispatchTime.now() + 1.5
+                DispatchQueue.main.asyncAfter(deadline: when, execute: {
                     self.player?.stop()
+                    self.checkMicAvailability()
                 })
             }
         } catch let error {
