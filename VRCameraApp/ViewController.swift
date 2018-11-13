@@ -9,6 +9,18 @@
 import UIKit
 import Photos
 import AVFoundation
+import AudioToolbox
+
+private func AudioQueueInputCallback(
+    _ inUserData: UnsafeMutableRawPointer?,
+    inAQ: AudioQueueRef,
+    inBuffer: AudioQueueBufferRef,
+    inStartTime: UnsafePointer<AudioTimeStamp>,
+    inNumberPacketDescriptions: UInt32,
+    inPacketDescs: UnsafePointer<AudioStreamPacketDescription>?)
+{
+    // Do nothing, because not recoding.
+}
 
 class ViewController: UIViewController {
     
@@ -38,17 +50,110 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var helpMenuButton: UIButton!
     
+    var voiceCommandTimer: Timer!
+    var voiceCommandQueue: AudioQueueRef!
+    var isVoiceCommandFinished = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.currentFilterName = filterNames[currentFilterIndex]
 
         self.setupEyeFrame()
         self.checkCameraAvailability()
+        self.checkMicAvailability()
+    }
+    
+    func checkMicAvailability() {
+        switch AVAudioSession.sharedInstance().recordPermission() {
+        case AVAudioSessionRecordPermission.granted:
+            self.setupVoiceCommand()
+        case AVAudioSessionRecordPermission.denied:
+            break
+        case AVAudioSessionRecordPermission.undetermined:
+            self.setupVoiceCommand()
+        default:
+            break
+        }
+    }
+    
+    func setupVoiceCommand() {
+        var dataFormat = AudioStreamBasicDescription(mSampleRate: 44100.0,
+                                                     mFormatID: kAudioFormatLinearPCM,
+                                                     mFormatFlags: AudioFormatFlags(kLinearPCMFormatFlagIsBigEndian | kLinearPCMFormatFlagIsSignedInteger | kLinearPCMFormatFlagIsPacked),
+                                                     mBytesPerPacket: 2,
+                                                     mFramesPerPacket: 1,
+                                                     mBytesPerFrame: 2,
+                                                     mChannelsPerFrame: 1,
+                                                     mBitsPerChannel: 16,
+                                                     mReserved: 0)
+        
+        var audioQueue: AudioQueueRef? = nil
+        var error = noErr
+        error = AudioQueueNewInput(&dataFormat,
+                                   AudioQueueInputCallback,
+                                   UnsafeMutableRawPointer(Unmanaged.passUnretained(self).toOpaque()),
+                                   .none,
+                                   .none,
+                                   0,
+                                   &audioQueue)
+        if error == noErr {
+            self.voiceCommandQueue = audioQueue
+        }
+        AudioQueueStart(self.voiceCommandQueue, nil)
+        
+        
+        // Enable level meter
+        var enabledLevelMeter: UInt32 = 1
+        AudioQueueSetProperty(self.voiceCommandQueue, kAudioQueueProperty_EnableLevelMetering, &enabledLevelMeter, UInt32(MemoryLayout<UInt32>.size))
+        
+        self.voiceCommandTimer = Timer.scheduledTimer(timeInterval: 0.05,
+                                          target: self,
+                                          selector: #selector(detectVolume(_:)),
+                                          userInfo: nil,
+                                          repeats: true)
+        self.voiceCommandTimer.fire()
+    }
+    
+    @objc func detectVolume(_ timer: Timer) {
+        // Get level
+        var levelMeter = AudioQueueLevelMeterState()
+        var propertySize = UInt32(MemoryLayout<AudioQueueLevelMeterState>.size)
+        
+        AudioQueueGetProperty(
+            self.voiceCommandQueue,
+            kAudioQueueProperty_CurrentLevelMeterDB,
+            &levelMeter,
+            &propertySize)
+        if levelMeter.mPeakPower >= -10.0 {
+            if !self.isVoiceCommandFinished {
+                self.isVoiceCommandFinished = true
+                self.changeFilter()
+                self.playSound(name: "poyo")
+                let when = DispatchTime.now() + 1.5
+                DispatchQueue.main.asyncAfter(deadline: when, execute: {
+                    self.isVoiceCommandFinished = false
+                })
+            }
+        }
+    }
+    
+    func stopUpdatingVolume() {
+        // Finish observation
+        self.voiceCommandTimer.invalidate()
+        self.voiceCommandTimer = nil
+        AudioQueueFlush(self.voiceCommandQueue)
+        AudioQueueStop(self.voiceCommandQueue, false)
+        AudioQueueDispose(self.voiceCommandQueue, true)
     }
     
     @IBAction func showHelpMenu(_ sender: UIButton) {
+        var alertMessage = "１回タップでフィルターを切り替え\n2回タップでVR/通常モードを切り替え\n映像画面を長押しで写真を撮る"
+        if AVAudioSession.sharedInstance().recordPermission() == AVAudioSessionRecordPermission.granted {
+            alertMessage = "１回タップするか指パッチンでフィルターを切り替え\n2回タップでVR/通常モードを切り替え\n映像画面を長押しで写真を撮る"
+        }
+
         let alert = UIAlertController(title: "使い方",
-                                      message: "１回タップでフィルターを切り替え\n2回タップでVR/通常モードを切り替え\n映像画面を長押しで写真を撮る",
+                                      message: alertMessage,
                                       preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "閉じる", style: UIAlertActionStyle.cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
@@ -172,11 +277,15 @@ extension ViewController {
     
     @objc func didSingleTap(_ : UITapGestureRecognizer?) {
         // シングルタップ
+        changeFilter()
+        playSound(name: "poyo")
+    }
+    
+    func changeFilter() {
         // フィルターを変更する
         currentFilterIndex += 1
         let index: Int = currentFilterIndex % filterNames.count
         currentFilterName = filterNames[index]
-        playSound(name: "poyo")
     }
     
     @objc func didDoubleTap(_: UITapGestureRecognizer) {
@@ -208,16 +317,19 @@ extension ViewController {
     }
     
     func playSound(name: String) {
+        stopUpdatingVolume()
         guard let url = Bundle.main.url(forResource: name, withExtension: "mp3") else { return }
         
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
             player = try AVAudioPlayer(contentsOf: url)
             guard let player = player else { return }
             if(!player.isPlaying) {
                 player.play()
+                let when = DispatchTime.now() + 1.5
+                DispatchQueue.main.asyncAfter(deadline: when, execute: {
+                    self.player?.stop()
+                    self.checkMicAvailability()
+                })
             }
         } catch let error {
             print(error.localizedDescription)
