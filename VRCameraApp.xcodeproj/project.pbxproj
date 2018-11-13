@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		653C3D5CCEE59B39B9936745 /* Pods_VRCameraApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CD08E4846CAC3D9C280585 /* Pods_VRCameraApp.framework */; };
+		A3E0DCCE16EAC30528D2B5CE /* Pods_VRCameraAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429D3439FE1C7611D90AC4C8 /* Pods_VRCameraAppTests.framework */; };
+		C88269CAAB21CD5FABE84CFA /* Pods_VRCameraAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF368AAA48533C9A32DBD6 /* Pods_VRCameraAppUITests.framework */; };
+		CA8968011F3C11CB0096A6E2 /* switch_vr_normal_mode.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA8968001F3C11CB0096A6E2 /* switch_vr_normal_mode.mp3 */; };
 		CAC4B3041F3A59F200B8F818 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4B3031F3A59F200B8F818 /* AppDelegate.swift */; };
 		CAC4B3061F3A59F200B8F818 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4B3051F3A59F200B8F818 /* ViewController.swift */; };
 		CAC4B3091F3A59F200B8F818 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC4B3071F3A59F200B8F818 /* Main.storyboard */; };
@@ -15,6 +19,8 @@
 		CAC4B3111F3A59F200B8F818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC4B30F1F3A59F200B8F818 /* LaunchScreen.storyboard */; };
 		CAC4B31C1F3A59F200B8F818 /* VRCameraAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4B31B1F3A59F200B8F818 /* VRCameraAppTests.swift */; };
 		CAC4B3271F3A59F200B8F818 /* VRCameraAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4B3261F3A59F200B8F818 /* VRCameraAppUITests.swift */; };
+		CAC4B3361F3AD50300B8F818 /* poyo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAC4B3341F3AD50300B8F818 /* poyo.mp3 */; };
+		CAC4B3371F3AD50300B8F818 /* screenshot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAC4B3351F3AD50300B8F818 /* screenshot.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19CD08E4846CAC3D9C280585 /* Pods_VRCameraApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VRCameraApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24FD15B1F8872F2977CB89FE /* Pods-VRCameraApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRCameraApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VRCameraApp/Pods-VRCameraApp.debug.xcconfig"; sourceTree = "<group>"; };
+		429D3439FE1C7611D90AC4C8 /* Pods_VRCameraAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VRCameraAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DEF368AAA48533C9A32DBD6 /* Pods_VRCameraAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VRCameraAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53DF15D7354B210138D09D32 /* Pods-VRCameraApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRCameraApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VRCameraApp/Pods-VRCameraApp.release.xcconfig"; sourceTree = "<group>"; };
+		C02C1A20F3AB386327F72876 /* Pods-VRCameraAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRCameraAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VRCameraAppTests/Pods-VRCameraAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C157C11239A720E306086071 /* Pods-VRCameraAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRCameraAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VRCameraAppTests/Pods-VRCameraAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		C659FE5AFDF1942209015D49 /* Pods-VRCameraAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRCameraAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VRCameraAppUITests/Pods-VRCameraAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CA8968001F3C11CB0096A6E2 /* switch_vr_normal_mode.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = switch_vr_normal_mode.mp3; sourceTree = "<group>"; };
 		CAC4B3001F3A59F200B8F818 /* VRCameraApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRCameraApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC4B3031F3A59F200B8F818 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAC4B3051F3A59F200B8F818 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +64,9 @@
 		CAC4B3221F3A59F200B8F818 /* VRCameraAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VRCameraAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC4B3261F3A59F200B8F818 /* VRCameraAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRCameraAppUITests.swift; sourceTree = "<group>"; };
 		CAC4B3281F3A59F200B8F818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAC4B3341F3AD50300B8F818 /* poyo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = poyo.mp3; sourceTree = "<group>"; };
+		CAC4B3351F3AD50300B8F818 /* screenshot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = screenshot.mp3; sourceTree = "<group>"; };
+		DFF262CDC1FB126B046367C5 /* Pods-VRCameraAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRCameraAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VRCameraAppUITests/Pods-VRCameraAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653C3D5CCEE59B39B9936745 /* Pods_VRCameraApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E0DCCE16EAC30528D2B5CE /* Pods_VRCameraAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +90,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C88269CAAB21CD5FABE84CFA /* Pods_VRCameraAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6252321678BD3D84436A32D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24FD15B1F8872F2977CB89FE /* Pods-VRCameraApp.debug.xcconfig */,
+				53DF15D7354B210138D09D32 /* Pods-VRCameraApp.release.xcconfig */,
+				C02C1A20F3AB386327F72876 /* Pods-VRCameraAppTests.debug.xcconfig */,
+				C157C11239A720E306086071 /* Pods-VRCameraAppTests.release.xcconfig */,
+				DFF262CDC1FB126B046367C5 /* Pods-VRCameraAppUITests.debug.xcconfig */,
+				C659FE5AFDF1942209015D49 /* Pods-VRCameraAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A0A47A3E28559042D6D67982 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19CD08E4846CAC3D9C280585 /* Pods_VRCameraApp.framework */,
+				429D3439FE1C7611D90AC4C8 /* Pods_VRCameraAppTests.framework */,
+				4DEF368AAA48533C9A32DBD6 /* Pods_VRCameraAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CAC4B2F71F3A59F200B8F818 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +127,8 @@
 				CAC4B31A1F3A59F200B8F818 /* VRCameraAppTests */,
 				CAC4B3251F3A59F200B8F818 /* VRCameraAppUITests */,
 				CAC4B3011F3A59F200B8F818 /* Products */,
+				6252321678BD3D84436A32D8 /* Pods */,
+				A0A47A3E28559042D6D67982 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +145,7 @@
 		CAC4B3021F3A59F200B8F818 /* VRCameraApp */ = {
 			isa = PBXGroup;
 			children = (
+				CAC4B37C1F3AF27400B8F818 /* 効果音 */,
 				CAC4B3031F3A59F200B8F818 /* AppDelegate.swift */,
 				CAC4B3051F3A59F200B8F818 /* ViewController.swift */,
 				CAC4B3071F3A59F200B8F818 /* Main.storyboard */,
@@ -128,6 +175,16 @@
 			path = VRCameraAppUITests;
 			sourceTree = "<group>";
 		};
+		CAC4B37C1F3AF27400B8F818 /* 効果音 */ = {
+			isa = PBXGroup;
+			children = (
+				CA8968001F3C11CB0096A6E2 /* switch_vr_normal_mode.mp3 */,
+				CAC4B3341F3AD50300B8F818 /* poyo.mp3 */,
+				CAC4B3351F3AD50300B8F818 /* screenshot.mp3 */,
+			);
+			name = "効果音";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAC4B32B1F3A59F200B8F818 /* Build configuration list for PBXNativeTarget "VRCameraApp" */;
 			buildPhases = (
+				3B3BA2DED9065DE10E8CF33B /* [CP] Check Pods Manifest.lock */,
 				CAC4B2FC1F3A59F200B8F818 /* Sources */,
 				CAC4B2FD1F3A59F200B8F818 /* Frameworks */,
 				CAC4B2FE1F3A59F200B8F818 /* Resources */,
+				CDA2B03849B340E05EB54177 /* [CP] Embed Pods Frameworks */,
+				FA9B24CCD136CEFC439E6B5A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAC4B32E1F3A59F200B8F818 /* Build configuration list for PBXNativeTarget "VRCameraAppTests" */;
 			buildPhases = (
+				613643DF086582A187C46E48 /* [CP] Check Pods Manifest.lock */,
 				CAC4B3131F3A59F200B8F818 /* Sources */,
 				CAC4B3141F3A59F200B8F818 /* Frameworks */,
 				CAC4B3151F3A59F200B8F818 /* Resources */,
+				C1536477DDDDF9C92EE9E8BB /* [CP] Embed Pods Frameworks */,
+				13F060C58DB8D141CFD6143A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAC4B3311F3A59F200B8F818 /* Build configuration list for PBXNativeTarget "VRCameraAppUITests" */;
 			buildPhases = (
+				342C62822EE293306CDF9160 /* [CP] Check Pods Manifest.lock */,
 				CAC4B31E1F3A59F200B8F818 /* Sources */,
 				CAC4B31F1F3A59F200B8F818 /* Frameworks */,
 				CAC4B3201F3A59F200B8F818 /* Resources */,
+				01697388A33B60B3660B2F04 /* [CP] Embed Pods Frameworks */,
+				0B83EFCEBC7EA9E17B8C1023 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,8 +305,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAC4B3111F3A59F200B8F818 /* LaunchScreen.storyboard in Resources */,
+				CAC4B3361F3AD50300B8F818 /* poyo.mp3 in Resources */,
 				CAC4B30E1F3A59F200B8F818 /* Assets.xcassets in Resources */,
 				CAC4B3091F3A59F200B8F818 /* Main.storyboard in Resources */,
+				CA8968011F3C11CB0096A6E2 /* switch_vr_normal_mode.mp3 in Resources */,
+				CAC4B3371F3AD50300B8F818 /* screenshot.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +328,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01697388A33B60B3660B2F04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VRCameraAppUITests/Pods-VRCameraAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0B83EFCEBC7EA9E17B8C1023 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VRCameraAppUITests/Pods-VRCameraAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		13F060C58DB8D141CFD6143A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VRCameraAppTests/Pods-VRCameraAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		342C62822EE293306CDF9160 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3B3BA2DED9065DE10E8CF33B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		613643DF086582A187C46E48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C1536477DDDDF9C92EE9E8BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VRCameraAppTests/Pods-VRCameraAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDA2B03849B340E05EB54177 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VRCameraApp/Pods-VRCameraApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA9B24CCD136CEFC439E6B5A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VRCameraApp/Pods-VRCameraApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CAC4B2FC1F3A59F200B8F818 /* Sources */ = {
@@ -417,40 +624,45 @@
 		};
 		CAC4B32C1F3A59F200B8F818 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24FD15B1F8872F2977CB89FE /* Pods-VRCameraApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = AUJHBFXVZ3;
 				INFOPLIST_FILE = VRCameraApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = inc.dokugaku.vrcameraapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "828b6757-52f1-4193-b687-d5811dfac273";
 				PROVISIONING_PROFILE_SPECIFIER = VRCameraApp;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		CAC4B32D1F3A59F200B8F818 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53DF15D7354B210138D09D32 /* Pods-VRCameraApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = AUJHBFXVZ3;
 				INFOPLIST_FILE = VRCameraApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = inc.dokugaku.vrcameraapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "828b6757-52f1-4193-b687-d5811dfac273";
 				PROVISIONING_PROFILE_SPECIFIER = VRCameraApp;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		CAC4B32F1F3A59F200B8F818 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C02C1A20F3AB386327F72876 /* Pods-VRCameraAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -466,6 +678,7 @@
 		};
 		CAC4B3301F3A59F200B8F818 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C157C11239A720E306086071 /* Pods-VRCameraAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -481,6 +694,7 @@
 		};
 		CAC4B3321F3A59F200B8F818 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFF262CDC1FB126B046367C5 /* Pods-VRCameraAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = AUJHBFXVZ3;
@@ -495,6 +709,7 @@
 		};
 		CAC4B3331F3A59F200B8F818 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C659FE5AFDF1942209015D49 /* Pods-VRCameraAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = AUJHBFXVZ3;
@@ -526,6 +741,7 @@
 				CAC4B32D1F3A59F200B8F818 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CAC4B32E1F3A59F200B8F818 /* Build configuration list for PBXNativeTarget "VRCameraAppTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +750,7 @@
 				CAC4B3301F3A59F200B8F818 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CAC4B3311F3A59F200B8F818 /* Build configuration list for PBXNativeTarget "VRCameraAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +759,7 @@
 				CAC4B3331F3A59F200B8F818 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
